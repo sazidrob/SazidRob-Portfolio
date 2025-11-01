@@ -45,3 +45,10 @@ footer{text-align:center;padding:20px;color:var(--muted)}
   display: block;
   margin: 20px auto;
 }
+
+.profile-img {
+  width: 150px;          /* adjust size */
+  border-radius: 50%;    /* makes it circular */
+  border: 2px solid #fff; /* optional: makes it visible on dark bg */
+}
+
