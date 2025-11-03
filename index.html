@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sazid Rob — Portfolio</title>
   <meta name="description" content="Portfolio of Sazid Rob — showcasing leadership, research, and projects in AI, Biotechnology, and Computer Science.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body id="site" data-theme="dark">
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="brand">Sazid Rob</div>
     <div class="navlinks">
       <a href="#about">About</a>
@@ -17,14 +17,14 @@
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
       <a href="#CodingProjects">My Coding Projects</a>
-      <button id="themeToggle" class="toggle">🌙 Theme</button>
+      <button id="themeToggle" class="toggle" aria-pressed="false">🌙 Theme</button>
     </div>
   </nav>
 
   <header class="hero">
     <div class="hero-left">
       <h1>Hi, I’m <span class="accent">Sazid</span>.</h1>
-       <!-- <img src="profile.jpg" alt="My Profile Picture" class="profile-img"> -->
+      <!-- profile img intentionally not required; keep for graceful fallback -->
       <p class="lead">A student researcher passionate about Artificial Intelligence, Biotechnology, and the science of curiosity. I blend technical problem-solving with philosophy, design, and leadership to make technology meaningful for people.</p>
       <div class="cta">
         <a class="btn" href="#research">Explore My Work</a>
@@ -32,9 +32,9 @@
       </div>
     </div>
 
-    <div class="canvas-wrap">
+    <div class="canvas-wrap" aria-hidden="true">
       <!-- Three.js canvas (interactive) -->
-      <canvas id="three-canvas" class="three-canvas"></canvas>
+      <canvas id="three-canvas" class="three-canvas" aria-hidden="true"></canvas>
 
       <!-- keep your profile image (unchanged) so layout doesn't break -->
       <img src="profile.jpg" alt="Sazid Rob" class="hero-photo">
@@ -44,7 +44,6 @@
   <main>
     <section id="about" class="card">
       <h2>About Me</h2>
-
       <p>I'm an ambitious and forward-thinking student from Stamford, CT, focused on Computer Science, AI, and Biotechnology. As a dual-enrollment student and active leader, I enjoy merging creativity with logic to solve real-world problems that impact people and communities.</p>
     </section>
 
@@ -64,19 +63,23 @@
       <p>My independent research portfolio ompiles ten investigations exploring Quantum Computing, AI Ethics, Biotechnology, and philosophical intersections between technology and humanity.</p>
 
       <a class="btn" href="SazidRob- Research Documentations for Research Extracurricular (1).pdf" download>📘 Download Full Research Portfolio (PDF)</a>
+
       <div class="grid research-grid">
         <div class="flip-card"><div class="flip-inner">
           <div class="front"><h3>Quantum Computing</h3></div>
           <div class="back"><p>How qubits, superposition, and entanglement redefine computation limits and scientific simulation.</p></div>
         </div></div>
+
         <div class="flip-card"><div class="flip-inner">
           <div class="front"><h3>AI Ethics</h3></div>
           <div class="back"><p>Examining fairness, accountability, and the social consequences of algorithmic design.</p></div>
         </div></div>
+
         <div class="flip-card"><div class="flip-inner">
           <div class="front"><h3>Biotechnology</h3></div>
           <div class="back"><p>Understanding CRISPR, mRNA, and computational design as engines of modern medicine.</p></div>
         </div></div>
+
         <div class="flip-card"><div class="flip-inner">
           <div class="front"><h3>Philosophy & Leadership</h3></div>
           <div class="back"><p>Exploring bias, emotional intelligence, and the balance between objectivity and meaning.</p></div>
@@ -87,10 +90,7 @@
     <section id="achievements" class="card">
       <h2>Achievements</h2>
       <ul>
-        <li>Featured in 
-          <a href="https://tinyurl.com/sazidnews" target="_blank" class="link">
-          <b>Stamford Magazine: 10 Teens to Watch (2025)</b> for innovation and leadership.</a>
-        </li>
+        <li>Featured in <a href="https://tinyurl.com/sazidnews" target="_blank" rel="noopener" class="link"><b>Stamford Magazine: 10 Teens to Watch (2025)</b></a> for innovation and leadership.</li>
         <li>Scored high in speaker points in ebate tournaments for critical thinking and communication.</li>
       </ul>
     </section>
@@ -98,34 +98,19 @@
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:srob@future5student.org">srob@future5student.org</a></p>
-      <p>GitHub: <a href="https://github.com/sazidrob" target="_blank">github.com/sazidrob</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/sazid-rob-7b4377351/" target="_blank">https://www.linkedin.com/in/sazid-rob-7b4377351/</a></p>
+      <p>GitHub: <a href="https://github.com/sazidrob" target="_blank" rel="noopener">github.com/sazidrob</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sazid-rob-7b4377351/" target="_blank" rel="noopener">https://www.linkedin.com/in/sazid-rob-7b4377351/</a></p>
     </section>
 
     <section id="CodingProjects" class="card">
       <h2>My Coding Projects</h2>
       <ul>
-        <li>
-          <b><a href="https://github.com/sazidrob/SazidRob-Portfolio" target="_blank">This Website!</a></b>: 
-          Built with Three.js to create this interactive experience showcasing my work!
-        </li>
-
-        <li>
-          <b><a href="https://github.com/sazidrob/Sazid-misc-projects/tree/main/python/ip-finder" target="_blank">IP Finder</a></b>: 
-          A Python script that retrieves the IP address of the user's device.
-        </li>
-
-        <li>
-          <b><a href="https://github.com/sazidrob/Sazid-misc-projects/tree/main/python/turtle-game-main" target="_blank">Tic Tac Toe – Turtle-based Game</a></b>: 
-          Built a Python Tic-Tac-Toe game using the Turtle library.
-        </li>
-
-        <li>
-          <b><a href="https://github.com/sazidrob/Sazid-misc-projects/tree/main/python/calculator" target="_blank">A simple, GUI-based Python calculator without the usual interface!</a></b>
-        </li>
+        <li><b><a href="https://github.com/sazidrob/SazidRob-Portfolio" target="_blank" rel="noopener">This Website!</a></b>: Built with Three.js to create this interactive experience showcasing my work!</li>
+        <li><b><a href="https://github.com/sazidrob/Sazid-misc-projects/tree/main/python/ip-finder" target="_blank" rel="noopener">IP Finder</a></b>: A Python script that retrieves the IP address of the user's device.</li>
+        <li><b><a href="https://github.com/sazidrob/Sazid-misc-projects/tree/main/python/turtle-game-main" target="_blank" rel="noopener">Tic Tac Toe – Turtle-based Game</a></b>: Built a Python Tic-Tac-Toe game using the Turtle library.</li>
+        <li><b><a href="https://github.com/sazidrob/Sazid-misc-projects/tree/main/python/calculator" target="_blank" rel="noopener">A simple, GUI-based Python calculator without the usual interface!</a></b></li>
       </ul>
     </section>
-
   </main>
 
   <footer>
@@ -135,5 +120,7 @@
   <script src="https://unpkg.com/three/build/three.min.js"></script>
   <script src="js/three-scene.js" defer></script>
   <script src="js/app.js" defer></script>
+  <script src="js/alert.js" defer></script>
+
 </body>
 </html>
