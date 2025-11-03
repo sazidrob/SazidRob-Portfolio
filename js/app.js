@@ -1,6 +1,5 @@
 // js/app.js
 document.addEventListener('DOMContentLoaded', () => {
-  // safe navigation: prefer three-scene if available
   function safeNavigate(href) {
     if (window.__threeNav && typeof window.__threeNav.navigateToSection === 'function') {
       window.__threeNav.navigateToSection(href);
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // bind all internal anchors
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href');
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // theme toggle
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -31,14 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
       themeToggle.setAttribute('aria-pressed', (next === 'dark') ? 'false' : 'true');
       try { localStorage.setItem('site-theme', next); } catch (e) {}
     });
-    // restore
     try {
       const saved = localStorage.getItem('site-theme');
       if (saved) document.getElementById('site').setAttribute('data-theme', saved);
     } catch (e) {}
   }
 
-  // intersection observer to reveal cards
   const cards = document.querySelectorAll('.card');
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(ent => {

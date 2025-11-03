@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body id="site" data-theme="dark">
-<!-- GAME-STYLE LOADER -->
+
+<!-- GAME-STYLE LOADER (place this as the first element inside <body>) -->
 <div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading site">
   <canvas id="loader-canvas" class="loader-canvas" aria-hidden="true"></canvas>
 
@@ -26,8 +27,7 @@
     </div>
   </div>
 </div>
- <script src="js/loader.js"></script>
-</div>
+
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="brand">Sazid Rob</div>
     <div class="navlinks">
@@ -41,12 +41,9 @@
     </div>
   </nav>
 
-
-
   <header class="hero">
     <div class="hero-left">
       <h1>Hi, I’m <span class="accent">Sazid</span>.</h1>
-      <!-- profile img intentionally not required; keep for graceful fallback -->
       <p class="lead">A student researcher passionate about Artificial Intelligence, Biotechnology, and the science of curiosity. I blend technical problem-solving with philosophy, design, and leadership to make technology meaningful for people.</p>
       <div class="cta">
         <a class="btn" href="#research">Explore My Work</a>
@@ -58,7 +55,7 @@
       <!-- Three.js canvas (interactive) -->
       <canvas id="three-canvas" class="three-canvas" aria-hidden="true"></canvas>
 
-      <!-- keep your profile image (unchanged) so layout doesn't break -->
+      <!-- keep your profile image -->
       <img src="profile.jpg" alt="Sazid Rob" class="hero-photo">
     </div>
   </header>
@@ -113,7 +110,7 @@
       <h2>Achievements</h2>
       <ul>
         <li>Featured in <a href="https://tinyurl.com/sazidnews" target="_blank" rel="noopener" class="link"><b>Stamford Magazine: 10 Teens to Watch (2025)</b></a> for innovation and leadership.</li>
-        <li>Scored high in speaker points in debate tournaments for critical thinking and communication.</li>
+        <li>Scored high in speaker points in ebate tournaments for critical thinking and communication.</li>
       </ul>
     </section>
 
@@ -139,14 +136,15 @@
     <p>© 2025 Sazid Rob • Built with Three.js • Hosted on GitHub Pages</p>
   </footer>
 
+<!-- loader script must run early -->
+<script src="js/loader.js"></script>
 
- 
-  <script src="https://unpkg.com/three/build/three.min.js"></script>
-  <script src="js/three-scene.js" defer></script>
-  <script src="js/app.js" defer></script>
-  <script src="js/alert.js" defer></script>
-  <
+<!-- load three.js before scene (CDN) -->
+<script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
 
-
+<!-- scene (wrapped to ensure THREE exists) -->
+<script src="js/three-scene.js" defer></script>
+<script src="js/app.js" defer></script>
+<script src="js/alert.js" defer></script>
 </body>
 </html>
