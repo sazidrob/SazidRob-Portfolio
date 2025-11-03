@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body id="site" data-theme="dark">
+  <!-- Site loader: binary rain + progress -->
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading site">
+  <canvas id="loader-canvas" class="loader-canvas" aria-hidden="true"></canvas>
+
+  <div class="loader-ui" role="presentation" aria-hidden="true">
+    <div class="loader-brand">Sazid Rob</div>
+    <div class="loader-title">Initializing systems…</div>
+    <div class="loader-sub">01001010 01110101 01110011 01110100 00100000 01100011 01101111 01100100 01101001 01101110 01100111</div>
+
+    <div class="loader-progress" aria-hidden="true">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+
+    <button id="loader-skip" class="loader-skip" aria-label="Skip loading">Skip</button>
+  </div>
+</div>
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="brand">Sazid Rob</div>
     <div class="navlinks">
@@ -20,6 +36,8 @@
       <button id="themeToggle" class="toggle" aria-pressed="false">🌙 Theme</button>
     </div>
   </nav>
+
+
 
   <header class="hero">
     <div class="hero-left">
@@ -121,6 +139,8 @@
   <script src="js/three-scene.js" defer></script>
   <script src="js/app.js" defer></script>
   <script src="js/alert.js" defer></script>
+  <script src="js/loader.js"></script>
+
 
 </body>
 </html>
