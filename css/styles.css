@@ -223,6 +223,11 @@ footer{ text-align:center; padding:20px; color:var(--muted); font-size:14px; }
   margin-bottom: 8px;
 }
 
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+
 
 /* ===== Fade-in Animation for Impact Cards ===== */
 .impact-card {
